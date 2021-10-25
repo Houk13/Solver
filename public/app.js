@@ -13,6 +13,7 @@ var Invoice = /** @class */ (function () {
 }());
 var invoices = [];
 invoices.push(new Invoice('hoi', 'doei', 54));
+invoices.push(new Invoice('hoi', 'doei', 54));
 var form = document.querySelector('.new-item-form');
 // console.log(form.children);
 // inputs
@@ -22,6 +23,4 @@ var details = document.querySelector('#details');
 var amount = document.querySelector('#amount');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var invOne = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
-    console.log(invoices);
 });
