@@ -2,47 +2,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TypeScript Tutorial</title>
+  <title>Starbattle solver</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <script type="module" src='app.js'></script>
 
-  <div class="wrapper">
-    <h1>Finance Logger</h1>
-
-    <!-- output list -->
-    <ul class="item-list">
-      
-    </ul>
+   <!-- Header part with UI for solving the puzzle -->
+  <div class="headerdiv">
+    <button onclick="testfun()">count vertical visible</button>
+    <button onclick="checkValidGrid()">check grid</button>
+    <button onclick="changeSetting()">change setting</button>
+    <button onclick="showCells()">show cell values</button>
   </div>
 
-  <footer>
-    <form class="new-item-form">
-      <div class="field">
-        <label>Type:</label>
-        <select id="type">
-          <option value="invoice">Invoice</option>
-          <option value="payment">Payment</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>To / From:</label>
-        <input type="text" id="tofrom">
-      </div>   
-      <div class="field">
-        <label>Details:</label>
-        <input type="text" id="details">
-      </div>
-      <div class="field">
-        <label>Amount (£):</label>
-        <input type="number" id="amount">
-      </div>
-      <button>Add</button>
-    </form>
 
-    <a href="https://www.thenetninja.co.uk">The Net Ninja</a>
-  </footer>
+  <div class="centraldiv">
+    <!-- // Left sidebar meant for visual changes to the grid, like size, colors, number, etc... -->
+    <div class="sidebar">
+      <p>Number of columns: <input type="number" id="nOfColumns" value="10"></p>
+      <p>Number of rows: <input type="number" id="nOfRows" value="10"></p>
+      <button id="gridSizeButton">Submit size</button>
+    </div>
 
-  <script type="module" src='app.js'></script>
+
+    <div id="gridContainerContainer" class="grid-container-container">
+      <div id="gridContainer" class="grid-container">
+
+      </div> 
+    </div>
+    
+  </div>
+
+
 </body>
 </html>
